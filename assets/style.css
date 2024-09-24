@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables fin */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav h1 {
+    color: var(--color-primario);
+  }
+  
+  nav a {
+    color: var(--color-primario);
+    transition: var(--transicion);
+  }
+  nav a:hover {
+    color: var(--valor-secundario);
+    border-bottom: 2px solid var(--valor-secundario);
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3rem;
+    margin: auto;
+  }
+  
+  nav ul li {
+    font-weight: var(--negrita);
+  }
+
+
+  .menu-hamburguesa {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
+
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    max-width: 68.75rem;
+    margin: auto;
+  }
+
+  @keyframes moveUp{
+    from{
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveDown{
+    from{
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+#bio{
+    animation: moveUp 2s ease-in-out;
+  }
+  @media only screen and (max-width: 760px) {
+    #bio {
+      width: 40%; /* Redimensiona la imagen al 100% del ancho del contenedor */
+    }
+  }
+
+#trans{
+  animation: moveUp 3s ease-in-out;
+}
+
+#trans2{
+  animation: moveUp 4s ease-in-out;
+}
+
+
+#aboutit{
+  animation: moveDown 2s ease-in-out;
+}
+
+
+#imgn{
+  animation: moveDown 1s ease-in-out;
+  width: 50%;
+}
+@media only screen and (max-width: 760px) {
+  #imgn {
+    width: 60%; /* Redimensiona la imagen al 100% del ancho del contenedor */
+  }
+}
+
+.mas-sobre {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+  
+}
+
+.mas-sobre h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.mas-sobre p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+.habilidades {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  
+}
+
+.encabezado-habilidad {
+  margin-bottom: 1rem;
+}
+
+.contenedor-habilidad img {
+  padding: 1.25rem;
+}
+
+.icono {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+
+@media (max-width: 768px) {
+  ul.navegacion.mostrar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 760px)
+{
+  .navegacion{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.navegacion {
+    width: 100%;
+    
+  }
+
+  ul.navegacion li {
+    margin-bottom: 5px;
+  }
+
+  .menu-hamburguesa {
+    display: block;
+  }
+}
+
+
+
+.tarjeta-icono{
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+  
+}
+
+.first-set{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
